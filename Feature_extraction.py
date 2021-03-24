@@ -61,15 +61,6 @@ def sitepopularity(host):
 
     else:
         return [nf, nf]
-'''
-
-def sitepopularity(host):
-    rank_host= tfe.feaEx(host,'REACH','RANK')
-    print("********rank host:************",rank_host)
-    rank_country= tfe.feaEx(host,'COUNTRY','RANK')
-    print("********rank country:*********",rank_country)
-    return [rank_host, rank_country]
-'''
 def Security_sensitive(tokens_words):
     sec_sen_words = ['confirm', 'account', 'banking', 'secure', 'ebayisapi', 'webscr', 'login', 'signin']
     cnt = 0
