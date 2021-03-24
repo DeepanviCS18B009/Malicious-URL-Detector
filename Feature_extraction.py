@@ -99,32 +99,6 @@ def getASN(host):
         return asn
     except:
         return nf
-
-
-
-        for key in wfeatures:
-            if(key!='src_html_cnt' and key!='src_hlink_cnt' and key!='src_iframe_cnt'):
-                total_cnt+=wfeatures[key]
-        wfeatures['src_total_jfun_cnt']=total_cnt
-
-    except Exception, e:
-        print "Error"+str(e)+" in downloading page "+url 
-        default_val=nf
-
-        wfeatures['src_html_cnt']=default_val
-        wfeatures['src_hlink_cnt']=default_val
-        wfeatures['src_iframe_cnt']=default_val
-        wfeatures['src_eval_cnt']=default_val
-        wfeatures['src_escape_cnt']=default_val
-        wfeatures['src_link_cnt']=default_val
-        wfeatures['src_underescape_cnt']=default_val
-        wfeatures['src_exec_cnt']=default_val
-        wfeatures['src_search_cnt']=default_val
-        wfeatures['src_total_jfun_cnt']=default_val    
-
-    return wfeatures'''
-
-
 def safebrowsing(url):
     api_key = "ABQIAAAA8C6Tfr7tocAe04vXo5uYqRTEYoRzLFR0-nQ3fRl5qJUqcubbrw"
     name = "URL_check"
