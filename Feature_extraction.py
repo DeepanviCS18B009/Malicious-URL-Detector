@@ -101,24 +101,6 @@ def getASN(host):
         return nf
 
 
-'''def web_content_features(url):
-    wfeatures={}
-    total_cnt=0
-    try:        
-        source_code = str(opener.open(url))
-        #print source_code[:500]
-
-        wfeatures['src_html_cnt']=source_code.count('<html')
-        wfeatures['src_hlink_cnt']=source_code.count('<a href=')
-        wfeatures['src_iframe_cnt']=source_code.count('<iframe')
-        #suspicioussrc_ javascript functions count
-
-        wfeatures['src_eval_cnt']=source_code.count('eval(')
-        wfeatures['src_escape_cnt']=source_code.count('escape(')
-        wfeatures['src_link_cnt']=source_code.count('link(')
-        wfeatures['src_underescape_cnt']=source_code.count('underescape(')
-        wfeatures['src_exec_cnt']=source_code.count('exec(')
-        wfeatures['src_search_cnt']=source_code.count('search(')
 
         for key in wfeatures:
             if(key!='src_html_cnt' and key!='src_hlink_cnt' and key!='src_iframe_cnt'):
