@@ -7,20 +7,19 @@ import main
 
 root = Tk()
 root.title("Malicious Url Detector")
-img = PhotoImage(width=300,height=300)
-data = ("{red red red red blue blue blue blue}")
-root.attributes('-alpha',0.9)
-root.iconbitmap(r'malware.ico')
-#root.configure(background='thistle')
-#root.geometry("800x100")
-frame = Frame(root)
-frame.pack()
-bottomframe = Frame(root)
-bottomframe.pack(side=BOTTOM)
+img = PhotoImage(width=500,height=300)
+root.attributes('-alpha',0.92)
+root.iconbitmap('malware.ico')
+root.configure(background='lavender')
+root.geometry("750x120")
+frame = Frame(root, bg ="lavender")
+frame.pack(ipady=10)
+bottomframe = Frame(root, bg="lavender")
+bottomframe.pack(side=BOTTOM, ipady=5)
 
-L1 = Label(frame, text="Enter the URL: ")
+L1 = Label(frame, text="Enter the URL: ", font=("Arial Bold",9),bg="lavender", padx=5, pady=5)
 L1.pack(side=LEFT)
-E1 = Entry(frame, bd=5, width=150)
+E1 = Entry(frame, bd=4,highlightcolor="black",highlightbackground="black", width=140,bg="lavender",fg="black")
 E1.pack(side=RIGHT)
 
 
@@ -37,7 +36,6 @@ def submitCallBack():
         new=1
         answer = tkMessageBox.askquestion("Redirect","Do you want to visit the url?")
         if answer == 'yes':
-                #webbrowser.open(url=E1.get(), new=1)
                 chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
                 webbrowser.get(chrome_path).open(url=E1.get(),new=1)
     elif int(a[1]) == 1:
@@ -50,15 +48,14 @@ def submitCallBack():
         tkMessageBox.showwarning("Warning","Cant Redirect, url contains a malware")
 
 def about():
-    tkMessageBox.showinfo("About","Authors: vijay maripi")
+    tkMessageBox.showinfo("About","The tool classifies the URL as Safe or Malicious or Malware based on AI.\nAuthors: Nikhitha & Deepanvi")
 
+B1 = Button(bottomframe, text="Submit",font=("Arial bold",9),command=submitCallBack, bg="purple", fg="snow")
+B1.pack(side=RIGHT, padx=0,pady=0)
 
-B2 = Button(root, text="About", command=about)
-B1 = Button(bottomframe, text="Submit", command=submitCallBack)
-B2.pack(side=RIGHT, padx=5, pady=5)
-B1.pack(side=RIGHT, padx=5,pady=5)
+B2 = Button(root, text="About", command=about,font=("Arial bold",9),bg="purple", fg="snow")
+B2.pack(side=RIGHT, padx=10, pady=0)
+
 root.mainloop()
-
-
 
 
