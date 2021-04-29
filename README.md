@@ -1,25 +1,36 @@
 # Malicious-URL-Detector
 ### Introduction
-Malicious Web sites largely promote the growth of Internet criminal activities and constrain the development of Web services.
-As a result, there has been strong motivation to develop systemic solution to stopping the user from visiting such Web sites.
-Our mechanism only analyzes the Uniform Resource Locator (URL) itself without accessing the content of Web sites. 
-Thus, it eliminates the run-time latency and the possibility of exposing users to the browser based vulnerabilities. 
-By employing learning algorithms, our scheme achieves better performance on generality and coverage compared with blacklisting service.
+# Software Engineering Lab - Tool Development
+
+# URL Detector
+
+### About the tool
+With the development of the internet, cyber-attacks are also increasing rapidly. The current cybersecurity 
+is not optimistic. URL Detector is a tool built using "Machine Learning" classification algorithms.
+It analyzes only the URL, without accessing the content of the websites and determines if the website is benign 
+or malicious.
 
 ### Prerequisites
 1. python 3.7
-2. pip package-management system 
+2. pip package management system
 
-### Steps to Use Malicious Url Detector
+### Steps to use the tool
+```
+Step-1: Download the code or clone the repository using the command "git clone https://github.com/CS18B013/SE-TOOL/"
+Step-2: Open terminal on your local system and enter into the file location by changing the directory using the command 
+" cd URL-Detector"
+Step-3: Launch the tool using the command "py gui.py"
+Step-4: A GUI appears if run without errors, where an input URL can be given, which the tool analyzes and 
+determines if it is a legitimate website or not.
 
 ```
-Step-1: Clone the github repository using the command "git clone https://github.com/vijay-maripi/Malicious-URL-Detector.git"
-Step-2: Change the directory to Malicious-URL-Detector using the command "cd Malicious-URL-Detector/"
-Step-3: Install requirements for  Malicious-URL-Detector using the command "pip install -r requirements.txt"
-Step-4: Now your good to launch the application run gui.py using the command "python gui.py"
-Step-5: (Optional) If you get any errors during code execution feel free to browse the errors.
-```
-#### Note: 
-1. you need to be connected to internet while running the code, because features of URL are collected from online.
-2. If you get any error while redirecting to the google chrome, change the path of the chrome in "gui.py code" according to                your system chrome path 
-#### Feel free to reproduce the work, play and learn with codes.
+
+### Contributors
+1. CS18B009 Deepanvi Penmetcha
+2. CS18B013 G Nikhitha Vedi
+
+### Versions
+1. Version 1.1 Combined different algorithms using stacking
+2. Version 1.2 Implementation of the stacked algorithms & model building
+3. Version 1.3 Intergrating and debugging
+4. Version 1.4 Final tool with added gui : https://github.com/CS18B013/URL-Detector
