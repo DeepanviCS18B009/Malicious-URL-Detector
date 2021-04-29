@@ -1,5 +1,4 @@
-# Malicious-URL-Detector
-### Introduction
+
 # Software Engineering Lab - Tool Development
 
 # URL Detector
